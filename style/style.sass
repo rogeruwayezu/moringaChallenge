@@ -231,12 +231,14 @@ form
   max-width: 600px
   margin: 0 auto 50px
   
+  
   input, textarea
     border: 3px solid white 
     width: 100%
     +box-sizing(border-box)
     padding: 10px
     background-color: transparent
+    
 
     &:focus
       outline: none 
@@ -244,6 +246,7 @@ form
 
   textarea
     height: 12em
+    margin-bottom: 50px
 
     .submit-wrap
       text-align: right
@@ -280,3 +283,37 @@ form
   ::placeholder /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: white
     opacity: 1 
+
+// Social media Links
+
+footer 
+  margin-bottom: 20px
+  .copyright
+    text-align: center 
+    text-transform: uppercase
+  
+  .client-title
+    font-style: normal
+    font-size: 16px
+    margin-left: 600px 
+
+.icons-wrap 
+  max-width: 700px
+  margin: 0px auto 50px
+  +display(flex)
+  +justify-content(space-around)
+  +flex-wrap(wrap) 
+
+  a
+    display: block 
+    +size(50px)
+    line-height: 50px
+    +transition()
+
+    &:hover
+      +transform(scale(1.2))
+
+  [class^="icon-"]
+    +size(40px)
+    padding-right: 20px
+    justify-content: space-around

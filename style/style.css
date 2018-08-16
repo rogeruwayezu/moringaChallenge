@@ -557,7 +557,8 @@ form {
       outline: none;
       border-color: #e1c184; }
   form textarea {
-    height: 12em; }
+    height: 12em;
+    margin-bottom: 50px; }
     form textarea .submit-wrap {
       text-align: right; }
   form [type="submit"] {
@@ -584,5 +585,61 @@ form {
   form ::placeholder {
     color: white;
     opacity: 1; }
+
+footer {
+  margin-bottom: 20px; }
+  footer .copyright {
+    text-align: center;
+    text-transform: uppercase; }
+  footer .client-title {
+    font-style: normal;
+    font-size: 16px;
+    margin-left: 600px; }
+
+.icons-wrap {
+  max-width: 700px;
+  margin: 0px auto 50px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: distribute;
+  -moz-box-pack: distribute;
+  box-pack: distribute;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-pack: distribute;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .icons-wrap a {
+    display: block;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    -webkit-transition: all 0.15s ease-out 0s;
+    -moz-transition: all 0.15s ease-out 0s;
+    transition: all 0.15s ease-out 0s; }
+    .icons-wrap a:hover {
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2);
+      transform: scale(1.2); }
+  .icons-wrap [class^="icon-"] {
+    height: 40px;
+    width: 40px;
+    padding-right: 20px;
+    justify-content: space-around; }
 
 /*# sourceMappingURL=style.css.map */
