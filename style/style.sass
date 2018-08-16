@@ -1,0 +1,215 @@
+@import /home/roger/Desktop/moringaChallenge/1-tools/bourbon/bourbon
+@import /home/roger/Desktop/portfolio/1-tools/animations/animations.scss
+@import /home/roger/Desktop/portfolio/1-tools/animations/bounceOut.scss
+  
+$bgcolor: #e5eaee
+$accent-light: #e1c184
+$accent: #c99065
+$documentBackgroundColor: #fff
+
+// Placeholders
+
+%background-image
+  background:
+    repeat: no-repeat, no-repeat
+    size: 40px, 20px, cover
+  
+body 
+  background-color: gainsboro
+
+
+header 
+  @extend %background-image
+  background: 
+    position: 600px 250px, 610px 600px, 70% 50%
+    image: url(../assets/img/logo/logo.png), url(../assets/img/mouse_click.png), url(../assets/img/backgrounds/h_img.jpg)
+  padding-bottom: 400px  
+  
+  nav 
+    float: right
+    padding: 30px 30px 0 0
+
+    a 
+      display: inline-block
+      margin-left: 30px
+      color: rgba(0, 0, 0, 0.7)
+      font-size: 14px
+      font-weight: 700
+      text-transform: uppercase
+
+  h1 
+      text-align: center
+      font-size: 35px
+      font-weight: 700
+      color: white
+      text-transform: uppercase
+      letter-spacing: 0.05em
+      clear: both
+      padding-top: 300px
+
+      span 
+        display: inline-block
+        margin-bottom: 15px
+
+  .kicker 
+    text-align: center
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: 0.05em
+    color: white
+    line-height: 1
+    margin-top: -30px
+
+
+// About Us Section 
+
+.about-section
+  text-align: center
+  padding-bottom: 60px
+
+  h1
+    text-transform: uppercase
+    padding-top: 50px
+    padding-bottom: 10px
+
+
+// Services Section 
+
+.services-section
+  background:
+    image: url(../assets/img/backgrounds/s_image.jpg)
+    size: cover
+  height: 488px
+  text-align: center
+  color: white 
+
+  h1 
+    padding-top: 70px
+    padding-bottom: 70px
+
+  .services-content
+    max-width: 550px
+    margin-left: 370px
+
+// Work Section 
+
+.work-section
+  padding-top: 70px
+  margin: 0px 10px 0px 10px
+  h2 
+    text-align: center 
+ 
+
+  .work-content
+    display: flex
+    +align-items(flex-end)
+    margin: 50px auto 80px
+
+  .work-unit
+    margin-right: 20px
+    text-align: center
+  
+
+
+// portfolio Section 
+
+.alt-section
+  h2 
+    text-align: center
+
+.section-portfolio
+  overflow-x: hidden
+
+.portfolio-belt
+  width: 200%
+  position: relative
+  left: 0%
+  +transition(all 800ms)
+
+.thumb-wrap, .portfolio-wrap
+  width: 50%
+  float: left
+
+.thumb-container
+  max-width: 960px
+  margin: 0px auto
+  padding-bottom: 100px
+  +clearfix 
+
+  .thumb-unit
+    display: block
+    margin: 15px 10px 15px 0px
+    width: 23.5%
+    float: left
+    position: relative
+    padding-top: 16%
+    cursor: pointer
+    background: 
+      position: center center 
+      repeat: no-repeat
+      size: cover
+
+    +perspective(300)
+
+    @media screen and (max-width: 760px)
+      width: 50%
+      padding-top: 26%
+
+
+    .thumb-overlay
+      +position(absolute, 0% 0px null 0px)
+      height: 100%
+      background: fade-out($accent, 0.1)
+      +display(flex)
+      +align-items(center)
+      +justify-content(space-around) 
+      +transform(matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1))
+      opacity: 0
+      +transition(opacity, 300ms, ease-in, 500ms)
+
+      strong
+        display: block
+        padding: 0px 20px
+        color: white
+        font:
+            weight: 300
+            size: 24px
+        text-transform: uppercase
+        line-height: 1.2
+
+    &:hover 
+      z-index: 2
+
+      .thumb-overlay
+        @extend %animation
+        opacity: 1
+
+.portfolio-container
+  max-width: 600px
+  margin: 0px auto
+  position: relative
+  display: none 
+
+  h4 
+    color: $accent
+    font-weight: 300
+    text-transform: uppercase
+    font-size: 24px
+    line-height: 1.2
+    margin: 0 0 20px
+
+  img 
+    max-width: 100% 
+    margin-bottom: 20px
+
+  .portfolio-return
+    +size(40px)
+    cursor: pointer
+    opacity: 0.5
+    +position(absolute, -5px null null -60px)
+
+    path
+      fill: rgba(0,0,0,0.4)
+
+    &:hover
+      opacity: 1 
