@@ -332,7 +332,7 @@ body {
 
 header {
   background-position: 50% 30%, 50% 90%, 70% 50%;
-  background-image: url(../assets/img/logo/logo.png), url(../assets/img/mouse_click.png), url(../assets/img/backgrounds/h_img.jpg);
+  background-image: url(https://res.cloudinary.com/dgdnxieva/image/upload/v1534762811/moringa/logo.png), url(https://res.cloudinary.com/dgdnxieva/image/upload/v1534762743/moringa/mouse_click.png), url(https://res.cloudinary.com/dgdnxieva/image/upload/v1534762794/moringa/h_img.jpg);
   padding-bottom: 140px; }
   header nav {
     float: right;
@@ -387,7 +387,7 @@ header {
     padding-bottom: 3px; }
 
 .services-section {
-  background-image: url(../assets/img/backgrounds/s_image.jpg);
+  background-image: url(https://res.cloudinary.com/dgdnxieva/image/upload/v1534762794/moringa/s_image.jpg);
   background-size: cover;
   padding-bottom: 100px;
   color: white; }
