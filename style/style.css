@@ -574,7 +574,7 @@ header {
     .work-content .thumb-unit {
       width: 200px; } }
 .section-contact {
-  background-image: url(/home/roger/Desktop/moringaChallenge/assets/img/backgrounds/c_image.jpg);
+  background-image: url(https://res.cloudinary.com/dgdnxieva/image/upload/v1534762792/moringa/c_image.jpg);
   background-size: cover; }
   .section-contact h2 {
     color: white;
