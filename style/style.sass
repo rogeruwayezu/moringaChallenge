@@ -15,15 +15,16 @@ $documentBackgroundColor: #fff
     size: 40px, 20px, cover
   
 body 
-  background-color: gainsboro
+  background-color: #eee
 
+// Header section style
 
 header 
   @extend %background-image
   background: 
-    position: 600px 250px, 610px 600px, 70% 50%
+    position: 600px 150px, 50% 90%, 70% 50%
     image: url(../assets/img/logo/logo.png), url(../assets/img/mouse_click.png), url(../assets/img/backgrounds/h_img.jpg)
-  padding-bottom: 400px  
+  padding-bottom: 100px  
   
   nav 
     float: right
@@ -32,7 +33,8 @@ header
     a 
       display: inline-block
       margin-left: 30px
-      color: rgba(0, 0, 0, 0.7)
+      color: rgba(255, 255, 255, 0.9)
+      text-decoration: none
       font-size: 14px
       font-weight: 700
       text-transform: uppercase
@@ -45,7 +47,7 @@ header
       text-transform: uppercase
       letter-spacing: 0.05em
       clear: both
-      padding-top: 300px
+      padding-top: 200px
 
       span 
         display: inline-block
@@ -60,17 +62,39 @@ header
     line-height: 1
     margin-top: -30px
 
+@media (max-width: 211px)
+  .kicker
+    margin-bottom: 60px
+
+@media (max-width: 1058px)
+  header
+    background:
+      position: 50% 10%, 50% 80%, 50% 50%
+        
+    nav 
+      float: none
+      text-align: center 
+      padding-top: 90px
+        
+    h1
+      padding-top: 0px
+    
+   
+
+
 
 // About Us Section 
 
 .about-section
   text-align: center
-  padding-bottom: 60px
+  padding-bottom: 40px
 
   h1
     text-transform: uppercase
     padding-top: 50px
-    padding-bottom: 10px
+    padding-bottom: 3px
+
+    
 
 
 // Services Section 
@@ -79,36 +103,58 @@ header
   background:
     image: url(../assets/img/backgrounds/s_image.jpg)
     size: cover
-  height: 488px
-  text-align: center
+  padding-bottom: 100px
+ 
   color: white 
 
-  h1 
+  h2
     padding-top: 70px
-    padding-bottom: 70px
+    padding-bottom: 40px
+    margin-left: 40%
 
   .services-content
     max-width: 550px
-    margin-left: 370px
+    margin-left: 23%
+    text-align: center
+
+@media screen and (max-width: 1058px)
+  .services-section
+    background:
+      position: 50% 50%
+    .services-content
+      margin: 0px auto
+      text-align: center
+
+
 
 // Work Section 
 
 .work-section
+  max-width: 95%
   padding-top: 70px
-  margin: 0px 10px 0px 10px
+  margin: 0px 3% 0px 3%
   h2 
     text-align: center 
  
 
-  .work-content
+  .work-content 
     display: flex
+    flex-wrap: wrap
     +align-items(flex-end)
-    margin: 50px auto 80px
+  
 
   .work-unit
-    margin-right: 20px
+    flex: 30%
     text-align: center
+
+@media screen and (max-width: 1200px) 
+  .work-unit 
+    flex: 50%
   
+@media screen and (max-width: 600px) 
+  .work-content 
+    flex-direction: column
+
 
 
 // portfolio Section 
@@ -116,6 +162,8 @@ header
 .alt-section
   h2 
     text-align: center
+    padding-top: 5%
+    padding-bottom: 2%
 
 .section-portfolio
   overflow-x: hidden
@@ -152,9 +200,11 @@ header
     +perspective(300)
 
     @media screen and (max-width: 760px)
-      width: 50%
+      width: 40%
       padding-top: 26%
+      margin-left: 6%
 
+      
 
     .thumb-overlay
       +position(absolute, 0% 0px null 0px)
@@ -213,6 +263,23 @@ header
 
     &:hover
       opacity: 1 
+
+
+@media screen and (max-width: 740px)
+  .portfolio-container
+    .portfolio-return
+      left: 0px
+    h2
+      margin-left: 60px
+
+@media screen and (max-width: 541px)
+  .work-content
+    width: 220px
+
+    .thumb-unit
+      width: 200px
+    
+
 
 
 // Form-section
